@@ -10,6 +10,8 @@ procesora będzie testowana podczas Olimpiady Informatycznej w roku szkolnym
 
 1. Ściągnij narzędzie i rozpakuj archiwum, np. do C:\OITIMETOOL.
 
+   https://github.com/accek/oitimetool-bin/zipball/master
+
 2. Otwórz wiersz poleceń (Start -> Uruchom -> Akcesoria -> Wiersz poleceń).
 
 3. Przejdź do folderu z Twoim skompilowanym programem.

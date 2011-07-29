@@ -11,6 +11,8 @@ competition in 2011/12 season.
 
 1. Download the package and extract it somewhere, for example to C:\OITIMETOOL.
 
+   https://github.com/accek/oitimetool-bin/zipball/master
+
 2. Open Command Prompt (Start -> Programs -> Accessories -> Command Prompt).
 
 3. Go to the folder with your compiled program.
