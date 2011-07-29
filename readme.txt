@@ -37,8 +37,8 @@ oitimetool/oitimetool instead of oitimetool/oitimetool.bat
 
 Example:
 
-# tar -zxf oitimetool.tar.gz
-# cd oitimetool/test-programs
+# unzip oitimetool.zip
+# cd oitimetool*/test-programs
 # ../oitimetool ./primes-gcc44-static-O2
 
 -- License --
