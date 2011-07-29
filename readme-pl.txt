@@ -33,7 +33,7 @@ jej do archiwum.
 Program uruchamia się w zasadzie tak, jak pod Windowsem, z tym że używa się skryptu
 oitimetool/oitimetool zamiast oitimetool/oitimetool.bat
 
-Przykład
+Przykład:
 
 # tar -zxf oitimetool.tar.gz
 # cd oitimetool/test-programs
