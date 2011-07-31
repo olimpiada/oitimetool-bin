@@ -2,10 +2,6 @@
   OITimeTool --- Narzędzie OI do pomiaru czasu działania programów
 -------------------------------------------------------------------------------
 
-Nowa technologia pomiaru czasu oparta o proste modelowanie sposobu dzuiałania
-procesora będzie testowana podczas Olimpiady Informatycznej w roku szkolnym
-2011/12.
-
 -- Instrukcja dla Windowsa --
 
 1. Ściągnij narzędzie i rozpakuj archiwum, np. do C:\OITIMETOOL.

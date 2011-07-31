@@ -2,11 +2,6 @@
   OITimeTool --- Time Measurement Tool for the Polish Olympiad in Informatics
 -------------------------------------------------------------------------------
 
--- Current Status --
-
-The new time measurement technology will be tested during various stages of the
-competition in 2011/12 season.
-
 -- Usage on Windows --
 
 1. Download the package and extract it somewhere, for example to C:\OITIMETOOL.
