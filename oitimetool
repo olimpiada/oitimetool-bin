@@ -1,15 +1,19 @@
 #!/bin/sh
 
 PIN_DIR0="`dirname "$0"`"
-PIN_DIR="$PIN_DIR0/pin-2.10-43611-gcc.3.4.6-ia32_intel64-linux"
+PIN_DIR="$PIN_DIR0/pin-2.12-53271-gcc.4.4.7-ia32_intel64-linux"
 PIN_TGZ="$PIN_DIR.tar.gz"
 
 if ! [ -d "$PIN_DIR" ]; then
     if [ -f "$PIN_TGZ" ]; then
         tar -C "$PIN_DIR0" -zxvf "$PIN_TGZ"
     else
-        echo "Please download PinTool library from http://tiny.pl/h1f3n"
+        echo "Please download PinTool library from"
+        echo "http://software.intel.com/en-us/articles/pintool-downloads/"
         echo "and save the .tar.gz file to oitimetool's folder."
+        echo
+        echo "Required version: rev. 53271, gcc 3.4 and later"
+        echo
         exit 1
     fi
 fi
