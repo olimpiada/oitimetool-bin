@@ -25,7 +25,7 @@ When running for the first time, you will be asked to download the Pin library
 which is used internally by the OITimeTool, but its license does not allow us
 to redistribute it.
 
--- Usage on Linux --
+-- Usage on Linux/Mac --
 
 This is generally the same as on Windows, except that you use
 oitimetool/oitimetool instead of oitimetool/oitimetool.bat
@@ -35,6 +35,8 @@ Example:
 # unzip oitimetool.zip
 # cd oitimetool/test-programs
 # ../oitimetool ./primes-gcc44-static-O2
+
+Mac version supports both 32-bit and 64-bit binaries.
 
 -- License --
 

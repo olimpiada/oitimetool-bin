@@ -5,8 +5,12 @@ set PIN_ZIP=%PIN_DIR%.zip
 
 if exist %PIN_DIR% goto found
 if exist %PIN_ZIP% goto have_zip
-echo Please download PinTool library from http://tiny.pl/h1f3k
+echo Please download PinTool library from
+echo http://software.intel.com/en-us/articles/pintool-downloads/
 echo and save the ZIP file to %PIN_DIR0%.
+echo
+echo Required Pin version: 43611
+echo
 exit /b 1
 
 :have_zip

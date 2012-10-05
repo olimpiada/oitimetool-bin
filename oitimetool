@@ -1,7 +1,17 @@
 #!/bin/sh
 
+if [ "`uname`" = "Darwin" ]; then
+    PIN_BASENAME="pin-2.12-53271-clang.3.0-ia32_intel64-mac"
+    TARGET=m
+    LIB_SUFFIX=".dylib"
+else
+    PIN_BASENAME="pin-2.12-53271-gcc.4.4.7-ia32_intel64-linux"
+    TARGET=l
+    LIB_SUFFIX=".so"
+fi
+
 PIN_DIR0="`dirname "$0"`"
-PIN_DIR="$PIN_DIR0/pin-2.12-53271-gcc.4.4.7-ia32_intel64-linux"
+PIN_DIR="$PIN_DIR0/$PIN_BASENAME"
 PIN_TGZ="$PIN_DIR.tar.gz"
 
 if ! [ -d "$PIN_DIR" ]; then
@@ -12,10 +22,28 @@ if ! [ -d "$PIN_DIR" ]; then
         echo "http://software.intel.com/en-us/articles/pintool-downloads/"
         echo "and save the .tar.gz file to oitimetool's folder."
         echo
-        echo "Required version: rev. 53271, gcc 3.4 and later"
+        echo "Required Pin version: 53271"
         echo
         exit 1
     fi
 fi
 
-"$PIN_DIR/pin" -t "$PIN_DIR0/oitimetool.so" $OITIMETOOL_ARGS -- $*
+if [ "$TARGET" = "m" ]; then
+    if ! stat "$PIN_DIR/ia32/bin/pinbin" | grep -q procmod; then
+        echo
+        echo "Pin needs additional privileges on Mac OS X. Please authorize"
+        echo "the script to make needed changes. This needs to be done only"
+        echo "once."
+        echo
+        osascript - <<EOF
+            do shell script "chgrp procmod $PIN_DIR/*/bin/pinbin && " & ¬
+                "chmod g+s $PIN_DIR/*/bin/pinbin" ¬
+                with administrator privileges
+EOF
+        if [ "$?" != "0" ]; then
+            exit 1
+        fi
+    fi
+fi
+
+"$PIN_DIR/pin" -t "$PIN_DIR0/oitimetool$LIB_SUFFIX" $OITIMETOOL_ARGS -- $*

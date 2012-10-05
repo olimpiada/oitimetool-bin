@@ -26,7 +26,7 @@ Przy pierwszym uruchomieniu program poprosi o ściągnięcie biblioteki Pin, kt�
 jest wewnętrznie używana przez OITimeTool. Jej licencja nie pozwala na dołączenie
 jej do archiwum.
 
--- Instrukcja dla Linuksa ---
+-- Instrukcja dla Linuksa/Maca ---
 
 Program uruchamia się w zasadzie tak, jak pod Windowsem, z tym że używa się skryptu
 oitimetool/oitimetool zamiast oitimetool/oitimetool.bat
@@ -36,6 +36,8 @@ Przykład:
 # unzip oitimetool.zip
 # cd oitimetool/test-programs
 # ../oitimetool ./primes-gcc44-static-O2
+
+Na Macu obsługiwane są zarówno 32-bitowe, jak i 64-bitowe binarki.
 
 -- Licencja --
 
