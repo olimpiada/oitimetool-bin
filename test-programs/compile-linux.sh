@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 PREFIX="$1"
 IN="$PREFIX.cpp"
@@ -21,9 +21,9 @@ function gcc_compile() {
     $* -o"$PREFIX$SUFFIX" "$IN"
 }
 
-for gcc in g++ g++34; do
-    gcc_compile "" $gcc
-    gcc_compile "-static" $gcc -static
-    gcc_compile "-static-O2" $gcc -static -O2
+for gcc in g++; do
+    gcc_compile "" $gcc -m32
+    gcc_compile "-static" $gcc -m32 -static
+    gcc_compile "-static-O2" $gcc -m32 -static -O2
 done
 
