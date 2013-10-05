@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------
   OITimeTool --- Narzędzie OI do pomiaru czasu działania programów
 -------------------------------------------------------------------------------
 
@@ -11,7 +11,7 @@
 2. Otwórz wiersz poleceń (Start -> Uruchom -> Akcesoria -> Wiersz poleceń).
 
 3. Przejdź do folderu z Twoim skompilowanym programem.
-   W poniższy przykładzie zakłądamy, że jest to jeden z programów dołączonych
+   W poniższym przykładzie zakładamy, że jest to jeden z programów dołączonych
    do OITimeTool.
 
    > c:
