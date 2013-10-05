@@ -1,6 +1,6 @@
 @echo off
 set PIN_DIR0=%~dp0
-set PIN_DIR=%PIN_DIR0%\pin-2.12-53271-msvc10-ia32_intel64-windows
+set PIN_DIR=%PIN_DIR0%\pin-2.13-61206-msvc10-windows
 set PIN_ZIP=%PIN_DIR%.zip
 
 if exist %PIN_DIR% goto found
@@ -9,7 +9,7 @@ echo Please download PinTool library from
 echo http://software.intel.com/en-us/articles/pintool-downloads/
 echo and save the ZIP file to %PIN_DIR0%.
 echo.
-echo Required Pin version: 53271 (vc10)
+echo Required Pin version: 61206 (vc10)
 echo.
 exit /b 1
 
