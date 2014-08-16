@@ -33,9 +33,9 @@ oitimetool/oitimetool zamiast oitimetool/oitimetool.bat
 
 Przykład:
 
-# unzip oitimetool.zip
-# cd oitimetool/test-programs
-# ../oitimetool ./primes-gcc44-static-O2
+$ unzip oitimetool.zip
+$ cd oitimetool/test-programs
+$ ../oitimetool ./primes-gcc44-static-O2
 
 Na Macu obsługiwane są zarówno 32-bitowe, jak i 64-bitowe binarki.
 
