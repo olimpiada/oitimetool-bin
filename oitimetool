@@ -5,7 +5,7 @@ if [ "`uname`" = "Darwin" ]; then
     TARGET=m
     LIB_SUFFIX=".dylib"
 else
-    PIN_BASENAME="pin-2.13-61206-gcc.4.4.7-linux"
+    PIN_BASENAME="pin-2.14-71313-gcc.4.4.7-linux"
     TARGET=l
     LIB_SUFFIX=".so"
 fi
@@ -16,7 +16,9 @@ PIN_TGZ="$PIN_DIR.tar.gz"
 
 if ! [ -d "$PIN_DIR" ]; then
     if [ -f "$PIN_TGZ" ]; then
-        tar -C "$PIN_DIR0" -zxvf "$PIN_TGZ"
+        echo -n "Extracting Pin ...  " >&2
+        tar -C "$PIN_DIR0" -zxf "$PIN_TGZ"
+        echo "done." >&2
     else
         echo "Please download PinTool library from"
         echo "http://software.intel.com/en-us/articles/pintool-downloads/"
@@ -25,7 +27,7 @@ if ! [ -d "$PIN_DIR" ]; then
         if [ "$TARGET" = "m" ]; then
             echo "Required Pin version: 53271"
         else
-            echo "Required Pin version: 61206"
+            echo "Required Pin version: 71313"
         fi
         echo
         exit 1
