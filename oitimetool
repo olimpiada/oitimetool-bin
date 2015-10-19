@@ -4,10 +4,12 @@ if [ "`uname`" = "Darwin" ]; then
     PIN_BASENAME="pin-2.12-53271-clang.3.0-ia32_intel64-mac"
     TARGET=m
     LIB_SUFFIX=".dylib"
+    OPTIONS=""
 else
     PIN_BASENAME="pin-2.14-71313-gcc.4.4.7-linux"
     TARGET=l
     LIB_SUFFIX=".so"
+    OPTIONS="-injection child -t"
 fi
 
 PIN_DIR0="`dirname "$0"`"
@@ -52,4 +54,4 @@ EOF
     fi
 fi
 
-"$PIN_DIR/pin" -t "$PIN_DIR0/oitimetool$LIB_SUFFIX" $OITIMETOOL_ARGS -- $*
+"$PIN_DIR/pin" $OPTIONS "$PIN_DIR0/oitimetool$LIB_SUFFIX" $OITIMETOOL_ARGS -- $*
